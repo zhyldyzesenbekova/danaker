@@ -1,0 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:200,300,400,500,600,700,800,900);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+
+.Header {
+  z-index: 100;
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 5px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  &.active {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0);
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .Header_Wrapper {
+    width: 95%;
+    padding: 13px;
+    height: 70px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.active {
+      background-color: #ffffffbe;
+      backdrop-filter: blur(7px);
+      box-shadow: 0 0 5px #802224;
+    }
+
+    .Logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .CalmLogo {
+        color: #802224;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      img {
+        margin-right: 5px;
+        display: block;
+        width: 50px;
+      }
+
+      &.active {
+        .CalmLogo {
+          opacity: 0;
+          display: flex;
+        }
+
+        img {
+          display: block;
+          width: 60px;
+          margin: 0;
+        }
+      }
+      &.second_active {
+        .CalmLogo {
+          display: none;
+        }
+      }
+    }
+    .bet_links {
+      width: 65%;
+      display: flex;
+      justify-content: space-between;
+      .Links {
+        display: flex;
+        .link {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 6px 20px;
+          height: 41px;
+          flex-shrink: 0;
+          color: black;
+          border-radius: 7px;
+
+          font-size: 20px;
+          font-weight: 400;
+          text-decoration: none;
+          &:hover {
+            color: #802224;
+            background-color: #ffffff78;
+          }
+        }
+      }
+      .Donate {
+        .Donate_Link {
+          display: inline-flex;
+          padding: 6px 20px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border: 1px solid #802224;
+
+          color: #000;
+
+          font-size: 20px;
+          text-decoration: none;
+          font-weight: 400;
+          line-height: normal;
+
+          &:hover {
+            text-decoration: underline;
+            color: white;
+            background-color: #802224;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .Header {
+    display: none;
+  }
+}
