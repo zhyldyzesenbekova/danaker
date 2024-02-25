@@ -1,0 +1,8 @@
+To run the project you have to type command above:
+1)yarn
+after download the files
+2)yarn dev
+Or
+1)npm i
+after download the files
+2)npm run dev
